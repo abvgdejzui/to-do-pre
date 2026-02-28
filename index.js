@@ -33,7 +33,8 @@ function createItem(item) {
 		saveTasks(items);
 	});
 	duplicateButton.addEventListener('click', () => {
-		const newItem = createItem(item);
+		const itemName = textElement.textContent;
+		const newItem = createItem(itemName);
 		listElement.prepend(newItem);
 		const items = getTasksFromDOM();
 		saveTasks(items);
